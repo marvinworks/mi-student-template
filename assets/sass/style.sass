@@ -1,0 +1,215 @@
+@import  "../../node_modules/basscss-sass/scss/basscss.scss"
+
+$fa-font-path:   "../../node_modules/font-awesome/fonts"
+@import  "../../node_modules/font-awesome/scss/font-awesome.scss"
+
+// @import url('https://fonts.googleapis.com/css?family=Catamaran:300,400')
+// @import url('https://fonts.googleapis.com/css?family=Cambay:400,700')
+// @import url('https://fonts.googleapis.com/css?family=Pragati+Narrow:400,700')
+@import url('https://fonts.googleapis.com/css?family=Khula:700|Yantramanav:100,300,400')
+
+@import "vars/colors"
+@import "vars/sizing"
+
+h1, h2, h3
+  @extend .p0, .m0
+  font-family: 'Khula', sans-serif
+  font-weight: bold
+
+
+.mw-link
+  color: $color3
+
+.mw-link--colorFade
+  transition: color 0.7s ease-out
+  &:hover
+    text-decoration: none
+    color: lighten($color3, 40%)
+
+
+
+.shadow
+  -webkit-box-shadow: 6px 6px 13px -5px rgba(44,54,63,1)
+  -moz-box-shadow: 6px 6px 13px -5px rgba(44,54,63,1)
+  box-shadow: 6px 6px 13px -5px rgba(44,54,63,1)
+  border-radius: 2px
+
+.mw-html
+  height: 100%
+  font-size: 100%
+  -webkit-font-smoothing: antialiased
+
+.mw-body
+  position: absolute
+  top: 0
+  bottom: 0
+  height: 100%
+  width: 100%
+  background: $color1
+  // background: -webkit-linear-gradient(to left, $color2 , $color1)
+  // background: linear-gradient(to left, $color2 , $color1)
+  font-family: 'Yantramanav', sans-serif
+  color: $color3
+
+.mw-wrapper
+  width: 100%
+  height: 100%
+  max-width: $site-max-width
+  margin-left: auto
+  margin-right: auto
+  position: relative
+
+.mw-wrapper__inner
+  position: absolute
+  width: 100%
+  left: 0
+  top: 50%
+  transform: translateY(-50%)
+  box-sizing: border-box
+  height: auto
+  padding-left: $left
+
+.mw-header
+  background-color: $color3
+  position: absolute
+  box-sizing: border-box
+  left: 0
+  top: $top
+  bottom: $top
+  width: $header-width
+  box-sizing: border-box
+  padding: $container-top $container-left
+  color: $color5
+  text-align: center
+  @extend .shadow
+
+.mw-main
+  background-color: $color5
+  width: 100%
+  padding: $top 0
+  padding-left: $header-width - $left
+  box-sizing: border-box
+  min-height: 500px
+  @extend .shadow
+
+.mw-contact
+  padding: $container-top $container-left*1.5
+  padding-right: $container-left*2
+
+////
+
+.mw-heaer__title
+  font-size: 2.3rem
+  color: $color4
+  line-height: 2.3rem
+  text-transform: uppercase
+
+.mw-header__slogan
+  @extend .m0
+  font-size: 1.2rem
+  margin-bottom: 2rem
+
+.mw-profile
+  margin: 0
+  margin-bottom: 2rem
+
+.mw-profile__image
+  max-width: 160px
+  border: solid 2px $color5
+  border-radius: 50%
+
+.mw-profile__location
+  font-weight: 300
+  display: block
+
+.mw-exLinks
+  width: 57%
+  box-sizing: border-box
+  margin-top: 5rem
+  margin-left: auto
+  margin-right: auto
+
+.mw-exLinks__link
+  color: lighten($color3, 15%)
+  width: 50%
+  font-size: 3.8rem
+  display: inline-block
+  float: left
+  transition: 1s ease-out
+
+///
+
+.mw-site__title
+  font-size: 2.3rem
+  line-height: 2.3rem
+
+.mw-form
+
+.mw-text
+  margin-top: 0
+  font-size: 1.4rem
+  margin-top: 0.5rem
+  margin-bottom: 1.5rem
+
+.mw-form__input
+  color: $color3
+  box-sizing: border-box
+  border: none
+  font-size: 1.4rem
+  display: block
+  margin: 0.5rem 0
+  width: 100%
+  padding: 0.5rem
+  border-radius: 2px
+  outline-color: $color2
+
+.mw-button
+  width: 100%
+  border: none
+  border-radius: 2px
+  font-size: 1.4rem
+  padding: 0.5rem
+  margin-top: 1rem
+  background-color: $color4
+  color: $color3
+  display: block
+  box-sizing: border-box
+  text-align: center
+  outline: none
+  position: relative
+  text-decoration: none
+  transition: color 0.2s ease-out
+  &::after
+    display: block
+    position: absolute
+    width: 100%
+    top: 0
+    bottom: 0
+    height: 0%
+    content: ""
+    background-color: $color2
+    left: 0
+    z-index: 0
+    transition: height 0.2s ease-out
+  &:hover
+    color: $color5
+    &:after
+      height: 100%
+
+
+.mw-button__inner
+  position: relative
+  z-index: 1
+  &:hover
+    cursor: pointer
+
+
+.mw-form__textarea
+  @extend .mw-form__input
+  height: 300px
+
+
+
+@import "components/footer"
+@import "responsive"
+@import "actions"
