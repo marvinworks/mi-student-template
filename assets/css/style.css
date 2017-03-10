@@ -1481,7 +1481,7 @@ p, a {
   color: #582630;
   box-sizing: border-box;
   border: none;
-  font-family: inherit;
+  font-family: "Yantramanav", sans-serif;
   font-size: 1.4rem;
   display: block;
   margin: 0.5rem 0;
@@ -1545,6 +1545,7 @@ p, a {
 /* line 210, ../sass/style.sass */
 .mw-form__textarea {
   height: 300px;
+  font-family: "Yantramanav", sans-serif;
 }
 
 /* line 1, ../sass/components/_footer.sass */
