@@ -1481,6 +1481,7 @@ p, a {
   color: #582630;
   box-sizing: border-box;
   border: none;
+  font-family: inherit;
   font-size: 1.4rem;
   display: block;
   margin: 0.5rem 0;
@@ -1490,7 +1491,7 @@ p, a {
   outline-color: #a54657;
 }
 
-/* line 168, ../sass/style.sass */
+/* line 169, ../sass/style.sass */
 .mw-button {
   width: 100%;
   border: none;
@@ -1508,7 +1509,7 @@ p, a {
   text-decoration: none;
   transition: color 0.2s ease-out;
 }
-/* line 184, ../sass/style.sass */
+/* line 185, ../sass/style.sass */
 .mw-button::after {
   display: block;
   position: absolute;
@@ -1522,26 +1523,26 @@ p, a {
   z-index: 0;
   transition: height 0.2s ease-out;
 }
-/* line 196, ../sass/style.sass */
+/* line 197, ../sass/style.sass */
 .mw-button:hover {
   color: #582630;
 }
-/* line 198, ../sass/style.sass */
+/* line 199, ../sass/style.sass */
 .mw-button:hover:after {
   height: 100%;
 }
 
-/* line 202, ../sass/style.sass */
+/* line 203, ../sass/style.sass */
 .mw-button__inner {
   position: relative;
   z-index: 1;
 }
-/* line 205, ../sass/style.sass */
+/* line 206, ../sass/style.sass */
 .mw-button__inner:hover {
   cursor: pointer;
 }
 
-/* line 209, ../sass/style.sass */
+/* line 210, ../sass/style.sass */
 .mw-form__textarea {
   height: 300px;
 }
