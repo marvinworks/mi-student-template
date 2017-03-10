@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "basscss-sass": "^4.0.0",
-    "font-awesome": "^4.7.0"
+    "basscss-sass": "^4.0.0"
   },
   "devDependencies": {},
   "scripts": {

@@ -4,6 +4,7 @@
   .mw-body
     position: static
     height: auto
+    background-color: $color4
 
   .mw-wrapper__inner
     position: static
@@ -15,6 +16,8 @@
     width: 100%
     padding: $container-top*3 $container-left
     overflow: auto
+    box-shadow: none
+    border-radius: 0
 
   .mw-exLinks
     width: 130px
@@ -23,6 +26,8 @@
   .mw-main
     padding: $top $container-left
     min-height: none
+    box-shadow: none
+    border-radius: 0
 
   .mw-contact
     padding: $container-top 0
@@ -39,3 +44,10 @@
 
   .mw-footer__impressum
     padding: 2rem
+
+  .mw-openFooterOnMobile
+    position: static
+    background-color: $color4
+    padding: 1.5rem 2rem
+    .mw-link
+      color: $color2
