@@ -1548,7 +1548,7 @@ p, a {
 
 /* line 1, ../sass/components/_footer.sass */
 .mw-footer {
-  transform: translateY(120%);
+  transform: translateY(100%);
   position: fixed;
   overflow: auto;
   top: 0;
@@ -1565,13 +1565,14 @@ p, a {
   margin-top: 2.7rem;
   margin-right: 5.75rem;
   margin-bottom: 1.8rem;
+  transform: translateX(100%);
 }
 /* line 14, ../sass/components/_footer.sass */
 .mw-footer__exit .fa {
   font-size: 4rem;
 }
 
-/* line 20, ../sass/components/_footer.sass */
+/* line 21, ../sass/components/_footer.sass */
 .mw-footer__header {
   padding: 0.9rem 2.5rem;
   text-align: right;
@@ -1583,14 +1584,14 @@ p, a {
   transform: translateY(-100%);
 }
 
-/* line 30, ../sass/components/_footer.sass */
+/* line 31, ../sass/components/_footer.sass */
 .mw-footer__impressum {
   max-width: 49.23077em;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 35, ../sass/components/_footer.sass */
+/* line 36, ../sass/components/_footer.sass */
 .mw-openFooterOnMobile {
   position: fixed;
   box-sizing: border-box;
@@ -1600,26 +1601,26 @@ p, a {
   padding-bottom: 1rem;
   text-align: center;
 }
-/* line 43, ../sass/components/_footer.sass */
+/* line 44, ../sass/components/_footer.sass */
 .mw-openFooterOnMobile .mw-link {
   text-decoration: none;
 }
 
-/* line 46, ../sass/components/_footer.sass */
+/* line 47, ../sass/components/_footer.sass */
 .mw-impressumData {
   text-align: left;
 }
-/* line 48, ../sass/components/_footer.sass */
+/* line 49, ../sass/components/_footer.sass */
 .mw-impressumData span {
   font-size: 1.3rem;
 }
-/* line 51, ../sass/components/_footer.sass */
+/* line 52, ../sass/components/_footer.sass */
 .mw-impressumData .mw-impressumData__label {
   display: block;
   font-size: 0.8rem;
 }
 
-/* line 55, ../sass/components/_footer.sass */
+/* line 56, ../sass/components/_footer.sass */
 .mw-impressumData__set {
   margin: 0;
 }
@@ -1739,4 +1740,8 @@ p, a {
 /* line 16, ../sass/_actions.sass */
 .mw-actions__footer--show .mw-footer {
   transform: translateY(0%);
+}
+/* line 19, ../sass/_actions.sass */
+.mw-actions__footer--show .mw-footer__exit {
+  transform: translateX(0);
 }
