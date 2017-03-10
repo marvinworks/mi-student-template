@@ -18,6 +18,11 @@ imprintLink.addEventListener("click", function() {
 
 footerExit.addEventListener("click", function() {
   site.classList.remove('mw-actions__footer--show');
+  footer.style.marginTop = 0;
+  setTimeout(function () {
+    footer.style.marginTop = "";
+    console.log("hi");
+  }, 1000);
   window.location.href.substr(0, window.location.href.indexOf('#'));
   // enableScroll();
 });
