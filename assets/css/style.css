@@ -1725,11 +1725,11 @@ p, a {
 /* line 3, ../sass/_actions.sass */
 .mw-init__site .mw-wrapper__inner {
   filter: blur(0px);
-  transition: 1s filter ease;
+  transition: 1s filter linear;
 }
 /* line 7, ../sass/_actions.sass */
 .mw-init__site .mw-footer {
-  transition: 0.7s transform ease;
+  transition: 0.7s transform linear;
 }
 
 /* line 13, ../sass/_actions.sass */
