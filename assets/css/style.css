@@ -1564,33 +1564,32 @@ p, a {
 
 /* line 13, ../sass/components/_footer.sass */
 .mw-footer__exit {
-  text-align: right;
-  margin-top: 2.7rem;
-  margin-right: 5.75rem;
-  margin-bottom: 1.8rem;
+  position: fixed;
+  transform: translateX(200%);
+  z-index: 1;
+  right: 0;
+  top: 0;
+  padding-top: 2.7rem;
+  padding-right: 5.75rem;
+  padding-bottom: 1.8rem;
 }
-/* line 15, ../sass/components/_footer.sass */
+/* line 19, ../sass/components/_footer.sass */
 .mw-footer__exit .fa {
   font-size: 4rem;
 }
 
-/* line 21, ../sass/components/_footer.sass */
-.mw-footer__header {
-  padding: 0.9rem 2.5rem;
-  text-align: right;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  left: 0;
-  box-sizing: border-box;
-  transform: translateY(-100%);
-}
-
-/* line 31, ../sass/components/_footer.sass */
+/* line 26, ../sass/components/_footer.sass */
 .mw-footer__impressum {
   max-width: 49.23077em;
   margin-left: auto;
   margin-right: auto;
+  padding-bottom: 6rem;
+  padding-top: 7rem;
+}
+/* line 32, ../sass/components/_footer.sass */
+.mw-footer__impressum h2 {
+  overflow: auto;
+  margin-top: 3rem;
 }
 
 /* line 36, ../sass/components/_footer.sass */
@@ -1625,6 +1624,16 @@ p, a {
 /* line 56, ../sass/components/_footer.sass */
 .mw-impressumData__set {
   margin: 0;
+}
+
+/* line 59, ../sass/components/_footer.sass */
+.mw-imprint__privacy {
+  margin-top: 9rem;
+}
+
+/* line 62, ../sass/components/_footer.sass */
+.font-sm {
+  font-size: 1rem;
 }
 
 @media screen and (min-height: 1024px) {
@@ -1698,29 +1707,35 @@ p, a {
     padding-right: 0;
   }
 
-  /* line 38, ../sass/responsive/_mobile.sass */
+  /* line 36, ../sass/responsive/_mobile.sass */
+  .mw-footer__exit {
+    padding-right: 1rem;
+  }
+
+  /* line 39, ../sass/responsive/_mobile.sass */
   .mw-footer__header {
     padding-right: 1rem;
     display: none;
   }
 
-  /* line 42, ../sass/responsive/_mobile.sass */
+  /* line 43, ../sass/responsive/_mobile.sass */
   .mw-footer__exit {
     margin-right: 1.3rem;
   }
 
-  /* line 45, ../sass/responsive/_mobile.sass */
+  /* line 46, ../sass/responsive/_mobile.sass */
   .mw-footer__impressum {
-    padding: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
-  /* line 48, ../sass/responsive/_mobile.sass */
+  /* line 50, ../sass/responsive/_mobile.sass */
   .mw-openFooterOnMobile {
     position: static;
     background-color: #f7ee7f;
     padding: 1.5rem 2rem;
   }
-  /* line 52, ../sass/responsive/_mobile.sass */
+  /* line 54, ../sass/responsive/_mobile.sass */
   .mw-openFooterOnMobile .mw-link {
     color: #a54657;
   }
@@ -1734,17 +1749,32 @@ p, a {
 .mw-init__site .mw-footer {
   transition: 0.7s transform linear;
 }
+/* line 10, ../sass/_actions.sass */
+.mw-init__site .mw-footer__exit {
+  transition: 0.3s transform linear;
+  transition-delay: 0.7s;
+}
 
-/* line 13, ../sass/_actions.sass */
+/* line 16, ../sass/_actions.sass */
+.mw-actions__footer--show {
+  height: 100%;
+  overflow: hidden;
+}
+/* line 17, ../sass/_actions.sass */
 .mw-actions__footer--show .mw-wrapper__inner {
   filter: blur(6px);
 }
-/* line 16, ../sass/_actions.sass */
+/* line 20, ../sass/_actions.sass */
 .mw-actions__footer--show .mw-footer {
   transform: translateY(0%);
   margin-top: 0;
 }
-/* line 20, ../sass/_actions.sass */
+/* line 24, ../sass/_actions.sass */
 .mw-actions__footer--show .mw-footer__exit {
   transform: translateX(0);
+}
+
+/* line 31, ../sass/_actions.sass */
+.delay0 {
+  transition-delay: 0s !important;
 }

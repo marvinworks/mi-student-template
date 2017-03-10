@@ -12,6 +12,9 @@ if(!isFirefox) {
 
 imprintLink.addEventListener("click", function() {
   site.classList.add('mw-actions__footer--show');
+  setTimeout(function () {
+    footerExit.classList.add('delay0');
+  }, 1000);
   // disableScroll();
   // enableScrollFooter();
 });
@@ -21,7 +24,7 @@ footerExit.addEventListener("click", function() {
   footer.style.marginTop = 0;
   setTimeout(function () {
     footer.style.marginTop = "";
-    console.log("hi");
+    footerExit.classList.remove('delay0');
   }, 1000);
   window.location.href.substr(0, window.location.href.indexOf('#'));
   // enableScroll();
