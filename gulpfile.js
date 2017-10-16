@@ -1,9 +1,9 @@
 const gulp = require('gulp');
-//const imagemin = require('gulp-imagemin');
+const imagemin = require('gulp-imagemin');
 //const uglify = require('gulp-uglify');
 const sass = require('gulp-sass');
 //const concat = require('gulp-concat');
-//const webpack = require('webpack-stream');
+const webpack = require('webpack-stream');
 const browserSync = require('browser-sync').create();
 
 // Copy HTML
@@ -13,19 +13,34 @@ gulp.task('copyHTML', function() {
       .pipe(browserSync.stream());
 });
 
-// Optimize Images
-gulp.task('imageMin', () =>
-  gulp.src('src/images/**')
-      .pipe(imagemin())
-      .pipe(gulp.dest('dist/images'))
-      .pipe(browserSync.stream())
-);
+// Copy JSON
+gulp.task('copyJSON', function() {
+  gulp.src('src/js/*.json')
+      .pipe(gulp.dest('dist/js/'))
+      .pipe(browserSync.stream());
+});
 
 // Compile Sass
 gulp.task('compileSass', () =>
   gulp.src('src/sass/*')
       .pipe(sass()).on('error', sass.logError)
       .pipe(gulp.dest('dist/css'))
+      .pipe(browserSync.stream())
+);
+
+// Compile Sass
+gulp.task('compileSassComp', () =>
+  gulp.src('src/sass/*')
+      .pipe(sass({outputStyle: 'compressed'})).on('error', sass.logError)
+      .pipe(gulp.dest('dist/css'))
+      .pipe(browserSync.stream())
+);
+
+// Optimize Images
+gulp.task('imageMin', () =>
+  gulp.src('src/images/**')
+      .pipe(imagemin())
+      .pipe(gulp.dest('dist/images'))
       .pipe(browserSync.stream())
 );
 
@@ -38,13 +53,6 @@ gulp.task('concatScripts', function() {
       .pipe(browserSync.stream());
 });
 
-// copyNationalFlags
-gulp.task('copyNationalFlags', function() {
-  gulp.src('node_modules/flag-icon-css/flags/**')
-      .pipe(gulp.dest('dist/images/flags/'))
-      .pipe(browserSync.stream());
-});
-
 // copyFonts
 gulp.task('copyFonts', function() {
   gulp.src('node_modules/font-awesome/fonts/**')
@@ -52,8 +60,9 @@ gulp.task('copyFonts', function() {
       .pipe(browserSync.stream());
 });
 
+
 // Default
-gulp.task('default', ['copyHTML', 'imageMin', 'compileSass', 'concatScripts', 'copyNationalFlags', 'copyFonts']);
+gulp.task('default', ['copyHTML', 'compileSass', 'concatScripts', 'copyFonts', 'imageMin', "copyJSON"]);
 
 gulp.task('watch', function() {
   browserSync.init({
@@ -62,8 +71,16 @@ gulp.task('watch', function() {
 
   gulp.watch('src/js/**', ['concatScripts']);
   gulp.watch('src/images/*', ['imageMin']);
-  gulp.watch('src/sass/*', ['compileSass']);
+  gulp.watch('src/sass/**', ['compileSass']);
   gulp.watch('src/*.html', ['copyHTML']);
-  gulp.watch('node_modules/flag-icon-css/flags/**', ['copyNationalFlags']);
+  gulp.watch('src/js/*.json', ['copyJSON']);
   gulp.watch('node_modules/font-awesome/scss/font-awesome/**', ['copyFonts']);
 });
+
+
+gulp.task('apply-prod-environment', function() {
+    process.env.NODE_ENV = 'production';
+});
+
+
+gulp.task('deploy', ['apply-prod-environment', 'copyHTML', 'compileSassComp', 'concatScripts', 'copyFonts', 'imageMin', 'copyJSON']);

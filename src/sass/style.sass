@@ -1,7 +1,7 @@
 @import  "../../node_modules/basscss-sass/scss/basscss.scss"
+$fa-font-path: "../fonts"
+@import "../../node_modules/font-awesome/scss/font-awesome"
 
-// $fa-font-path:   "../../node_modules/font-awesome/fonts" !important
-// @import  "../../node_modules/font-awesome/scss/font-awesome.scss"
 
 // @import url('https://fonts.googleapis.com/css?family=Catamaran:300,400')
 // @import url('https://fonts.googleapis.com/css?family=Cambay:400,700')
@@ -20,7 +20,7 @@ p, a
   font-size: 1.4rem
 
 .mw-link
-  color: $color3
+  color: $color4
 
 .mw-link--colorFade
   transition: color 0.7s ease-out
@@ -41,6 +41,10 @@ p, a
   font-size: 100%
   -webkit-font-smoothing: antialiased
 
+.mw-h3
+  margin-bottom: 0
+  margin-top: 2rem
+
 .mw-body
   position: absolute
   top: 0
@@ -51,7 +55,7 @@ p, a
   // background: -webkit-linear-gradient(to left, $color2 , $color1)
   // background: linear-gradient(to left, $color2 , $color1)
   font-family: 'Yantramanav', sans-serif
-  color: $color3
+  color: #333333
 
 .mw-wrapper
   width: 100%
@@ -91,7 +95,7 @@ p, a
   padding: $top 0
   padding-left: $header-width - $left
   box-sizing: border-box
-  min-height: 500px
+  min-height: 720px
   @extend .shadow
 
 .mw-contact
@@ -110,13 +114,15 @@ p, a
   @extend .m0
   font-size: 1.2rem
   margin-bottom: 2rem
+  color: $color4
 
 .mw-profile
   margin: 0
   margin-bottom: 2rem
 
 .mw-profile__image
-  max-width: 160px
+  width: 160px
+  height: 160px
   border: solid 2px $color5
   border-radius: 50%
 
@@ -130,6 +136,9 @@ p, a
   margin-top: 5rem
   margin-left: auto
   margin-right: auto
+
+.mw-profile__info
+  color: $color4
 
 .mw-exLinks__link
   color: lighten($color3, 15%)
@@ -172,7 +181,7 @@ p, a
   border-radius: 2px
   font-size: 1.4rem
   padding: 0.5rem
-  margin-top: 1rem
+  margin-top: 6rem
   background-color: $color2
   color: $color5
   display: block
@@ -190,12 +199,12 @@ p, a
     bottom: 0
     height: 0%
     content: ""
-    background-color: $color4
+    background-color: $color3
     left: 0
     z-index: 0
     transition: height 0.2s ease-out
   &:hover
-    color: $color3
+    color: $color4
     &:after
       height: 100%
 

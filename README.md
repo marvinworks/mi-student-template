@@ -1,4 +1,4 @@
-# marvinworks
-A small Contact form to get in touch with me :)
+# MI Personal Description
+A small Personal Overview for the Students
 
-### [Click here to get in Contact](http://marvin.works)
+### [Made by Marvin](http://marvin.works)
